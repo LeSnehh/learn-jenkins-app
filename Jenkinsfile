@@ -57,6 +57,7 @@ pipeline {
                     npm --version
                     echo "Deploying to production. Site ID: $NETLIFLY_SITE_ID"
                     node_modules/.bin/netlify status
+                    node_modules/.bin/netlify deploy --dir=build --prod
                 '''
             }
         }
